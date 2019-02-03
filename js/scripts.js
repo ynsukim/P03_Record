@@ -9,36 +9,39 @@ var observer = new MutationObserver(function(mutations) {
 
             if ($("body").hasClass("viewing-page-1")){
                 $('.bg_wrap02').addClass('bg_down').removeClass('bg_up')
-                $("#titleBox").removeClass("tbL2") .addClass("tbL1")
                 $("#title").empty().hide().append("a restrospect").fadeIn(500)
                 $(".introText").hide().fadeIn(500)
+                $("#titleBox").removeClass("tbL2") .addClass("tbL1")
                 }
             else if ($("body").hasClass("viewing-page-2")){
                 $('.bg_wrap02').addClass('bg_up').removeClass('bg_down')
                 $('.bg_wrap03').addClass('bg_down').removeClass('bg_up')
                 $(".introText").hide()
-                $( "#titleBox" )
-                .removeClass("tbL1") .addClass("tbL2")
+                $( "#titleBox" ).removeClass("tbL1") .addClass("tbL2")
                 $("#title").empty().hide().append("1996").fadeIn(300)
                 }
             else if ($("body").hasClass("viewing-page-3")){
                 $('.bg_wrap03').addClass('bg_up').removeClass('bg_down')
                 $('.bg_wrap04').addClass('bg_down').removeClass('bg_up')
                 $("#title").empty().hide().append("2008").fadeIn(300)
+                $( "#titleBox" ).removeClass("tbL1") .addClass("tbL2")
                 }
             else if ($("body").hasClass("viewing-page-4")){
                 $('.bg_wrap04').addClass('bg_up').removeClass('bg_down')
                 $('.bg_wrap05').addClass('bg_down').removeClass('bg_up')
                 $("#title").empty().hide().append("2011").fadeIn(300)
+                $( "#titleBox" ).removeClass("tbL1") .addClass("tbL2")
                 }
             else if ($("body").hasClass("viewing-page-5")){
                 $('.bg_wrap05').addClass('bg_up').removeClass('bg_down')
                 $('.bg_wrap06').addClass('bg_down').removeClass('bg_up')
                 $("#title").empty().hide().append("2014").fadeIn(300)
+                $( "#titleBox" ).removeClass("tbL1") .addClass("tbL2")
                 }
             else if ($("body").hasClass("viewing-page-6")){
                 $('.bg_wrap06').addClass('bg_up').removeClass('bg_down')
                 $("#title").empty().hide().append("2018").fadeIn(300)
+                $( "#titleBox" ).removeClass("tbL1") .addClass("tbL2")
                 }
         }
       });

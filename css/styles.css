@@ -59,7 +59,7 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 20vh;
-    min-height: 150px;
+    min-height: 100px;
     background-color: black;
     transition: all .5s linear;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
@@ -70,7 +70,7 @@ h2 {
 /* titleBox animage widtch*/
 .tbL1{
     width: 70vw;
-    min-width: 150px;
+    min-width: 100px;
 }
 .tbL2{
     width: 30vw;
@@ -89,14 +89,15 @@ h2 {
   align-items: center;
 }
 
-img {
+.pImg {
     position: absolute;
     /* width: 120vw; */
     height:120vh;
     filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.2));
 }
-.bgImg{
-    height:150vh;
+
+.mbPimg{
+    left:50%;
 }
 
 
@@ -266,4 +267,12 @@ body.disabled-onepage-scroll .main section.page3 .page_container {
   margin-left: auto;
   margin-right: auto;
   right: 0;
+}
+
+
+@media screen and (max-width: 480px){
+
+    .mbImg{right:-50vw; }
+    .mbImg2{right:-70vw; }
+
 }
