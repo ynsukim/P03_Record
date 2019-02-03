@@ -49,8 +49,6 @@ var observer = new MutationObserver(function(mutations) {
     });
 });
 
-
-
 /* JS for Mouse Paralax
 -----------------------------*/
 
@@ -73,33 +71,29 @@ function parallaxIt(e, target, movement) {
   });
 }
 
-
-
 /* JS for One Page Navigation
 -----------------------------*/
 !function($){
 
     $(document).ready(function(){
-    $(".main").onepage_scroll({
-      sectionContainer: "section",
-      responsiveFallback: 200,
-    });
+        $(".main").onepage_scroll({
+          sectionContainer: "section",
+          responsiveFallback: 300,
+        });
       });
 
-
-  var defaults = {
-    sectionContainer: "section",
-    easing: "ease",
-    animationTime: 800,
-    pagination: true,
-    updateURL: false,
-    keyboard: true,
-    beforeMove: null,
-    afterMove: null,
-    responsiveFallback: false,
-    direction : 'vertical'
-  };
-
+    var defaults = {
+        sectionContainer: "section",
+        easing: "ease",
+        animationTime: 800,
+        pagination: true,
+        updateURL: false,
+        keyboard: true,
+        beforeMove: null,
+        afterMove: null,
+        responsiveFallback: false,
+        direction : 'vertical'
+    };
 
   $.fn.swipeEvents = function() {
       return this.each(function() {
@@ -146,7 +140,6 @@ function parallaxIt(e, target, movement) {
       });
     };
 
-
   $.fn.onepage_scroll = function(options){
     var settings = $.extend({}, defaults, options),
         el = $(this),
@@ -172,12 +165,6 @@ function parallaxIt(e, target, movement) {
         }
       } else{
         $(this).css({
-          "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-         "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-         "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-         "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-         "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-         "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
          "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
          "transition": "all " + settings.animationTime + "ms " + settings.easing
         });
@@ -374,13 +361,13 @@ function parallaxIt(e, target, movement) {
       }
     });
 
-    el.swipeEvents().bind("swipeDown",  function(event){
-      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-      el.moveUp();
-    }).bind("swipeUp", function(event){
-      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-      el.moveDown();
-    });
+    // el.swipeEvents().bind("swipeDown",  function(event){
+    //   if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+    //   el.moveUp();
+    // }).bind("swipeUp", function(event){
+    //   if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+    //   el.moveDown();
+    // });
 
     // Create Pagination and Display Them
     if (settings.pagination == true) {
